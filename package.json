@@ -7,15 +7,14 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "./update-and-deploy.sh",
-    "deploy-only": "npx vercel --token W8i5zcdSxs6fNTNkO51JDhVx --prod --yes"
+    "export": "next build && next export",
+    "build:static": "next build",
+    "deploy:dreamhost": "npm run build:static && echo 'Ready to upload the out/ directory to DreamHost'"
   },
   "dependencies": {
-    "@vercel/analytics": "^1.5.0",
-    "clsx": "^2.1.1",
-    "framer-motion": "^11.18.2",
+    "framer-motion": "^11.3.19",
     "lucide-react": "^0.396.0",
-    "next": "^15.5.2",
+    "next": "14.2.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-intersection-observer": "^9.10.3",
